@@ -4,6 +4,7 @@ public class PropertiesConst {
 
     // Cache
     public static final String CACHE_USER_CACHE_TIME_TO_LIVE = "memory.cache.user.cache.time-to-live.seconds";
+    public static final String CACHE_BOOK_CACHE_TIME_TO_LIVE = "memory.cache.book.cache.time-to-live.seconds";
 
     public static final class PropertiesKeyEL {
         // JWT
