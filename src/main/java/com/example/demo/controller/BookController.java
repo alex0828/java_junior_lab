@@ -38,7 +38,7 @@ public class BookController {
 	@Scheduled(fixedDelay = 10000) // fixedDelay = 60000 表示當前方法執行完畢 60000ms(1分鐘)後，Spring scheduling會再次呼叫該方法
 	public void testFixDelay() {
 		long num = bookService.countBook();
-		System.out.println("資料庫裡有" + num + "本書");
+		System.out.println("There are " + num + " books in the Database");
 		// Lambda參考:https://www.tpisoftware.com/tpu/articleDetails/800
 		// 優點:簡化函式
 		List<BookDTO> bookScheduled = bookService.getAllBook();
@@ -90,22 +90,22 @@ public class BookController {
 		final byte[] textByte = inputString.getBytes("UTF-8");
 		// 編碼
 		final String encodedText = encoder.encodeToString(textByte);
-		System.out.println("encodedText=" + encodedText);
+		//System.out.println("encodedText=" + encodedText);
 		return encodedText;
 	}
 
 	public String bytesToBase64String(byte[] bytes) {
 
 		String bytesToBase64String = encoder.encodeToString(bytes);
-		System.out.println("bytesToBase64String=" + bytesToBase64String);
+		//System.out.println("bytesToBase64String=" + bytesToBase64String);
 		return bytesToBase64String;
 	}
 
 	void decodeBase64String(String base64String) throws Exception {
 		// 解碼
 		String decode = new String(decoder.decode(base64String), "UTF-8");
-		System.out.println("decode=" + decode);
-		System.out.println("length=" + decode.length());
+		//System.out.println("decode=" + decode);
+		//System.out.println("length=" + decode.length());
 
 	}
 
